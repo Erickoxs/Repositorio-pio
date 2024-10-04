@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administracion de la biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>panel de administracion</h1>
+        <nav><ul> <li><a href="index.html">Inicio</a></li>
+            <li> <a href="books.html">Libros Disponibles</a></li>
+            <li> <a href="admin.html">Administracion</a></li></ul></nav>
+        </header>
+<section class="admin-panel">
+    <h2>Gestionar libros</h2>
+    <form action="/add-book" method="POST">
+        <label for="title">Titulo del libro:</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="Autor">Autor:</label>
+        <input type="text" name="author" id="author" required>
+
+        <label for="Autor">Ano de publicacion:</label>
+        <input type="number" name="year" id="year" required>
+
+        <label for="status">Estado</label>
+        <select name="status" id="status">
+
+            <option value=""></option>
+            <option value="disponible">disponible</option>
+            <option value="prestado">prestado</option>
+            <option value="reservado">Reservado</option>
+        </select>
+
+        <button type="submit">Agregar libro</button>
+    </form>
+</section>
+</body>
+</html>
